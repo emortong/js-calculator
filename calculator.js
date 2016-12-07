@@ -7,6 +7,7 @@
  */
 
 
+
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
@@ -18,7 +19,27 @@
    * Return the value of `total`
    * @return { Number }
    */
+ function calculatorModule(x){
+    var memory = 0;
+    var total = 0;
 
+    return {
+      load: function(x) {
+        total = x;
+        return total;
+      },
+      getTotal: function() {
+        return total;
+      },
+
+
+
+    };
+ }
+
+ // var myCalculator = calculatorModule();
+ // myCalculator.load()
+ // console.log(myCalculator.getTotal());
 
   /**
    * Sums the value passed in with `total`
